@@ -1,0 +1,12 @@
+[submodule "src/dependencies/FRNN"]
+	path = src/dependencies/FRNN
+	url = git@github.com:lxxue/FRNN.git
+[submodule "src/dependencies/point_geometric_features"]
+	path = src/dependencies/point_geometric_features
+	url = git@github.com:drprojects/point_geometric_features.git
+[submodule "src/dependencies/grid_graph"]
+	path = src/dependencies/grid_graph
+	url = https://gitlab.com/1a7r0ch3/grid-graph.git
+[submodule "src/dependencies/parallel_cut_pursuit"]
+	path = src/dependencies/parallel_cut_pursuit
+	url = https://gitlab.com/1a7r0ch3/parallel-cut-pursuit.git
