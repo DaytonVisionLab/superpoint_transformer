@@ -1,8 +1,7 @@
 name: spt-env
 channels:
-  - pytorch
   - conda-forge
-  - defaults
+  - nodefaults
 dependencies:
   - _openmp_mutex=4.5=2_gnu
   - aiohappyeyeballs=2.6.1=pyhd8ed1ab_0
@@ -253,8 +252,6 @@ dependencies:
   - python-json-logger=2.0.7=pyhd8ed1ab_0
   - python-tzdata=2025.2=pyhd8ed1ab_0
   - python_abi=3.9=7_cp39
-  - pytorch=2.2.0=py3.9_cpu_0
-  - pytorch-mutex=1.0=cpu
   - pytz=2025.2=pyhd8ed1ab_0
   - pywin32=307=py39ha51f57c_3
   - pywinpty=2.0.15=py39ha51f57c_0
@@ -296,8 +293,6 @@ dependencies:
   - tinyobjloader=1.0.7=h63175ca_2
   - tk=8.6.13=h2c6b04d_2
   - tomli=2.2.1=pyhd8ed1ab_1
-  - torchmetrics=1.7.2=pyhd8ed1ab_0
-  - torchvision=0.17.0=py39_cpu
   - tornado=6.5.1=py39ha55e580_0
   - tqdm=4.67.1=pyhd8ed1ab_1
   - traitlets=5.14.3=pyhd8ed1ab_1
@@ -340,20 +335,37 @@ dependencies:
   - zlib=1.3.1=h2466b09_2
   - zstandard=0.23.0=py39ha55e580_2
   - zstd=1.5.7=hbeecb71_2
+  - absl-py
+  - fsspec
+  - grpcio
+  - joblib
+  - markdown
+  - scikit-learn
+  # - pyg-lib=0.2.0
+  # - pytorch_geometric=2.3.1=pyhd8ed1ab_0
   - pip:
       - --find-links https://data.pyg.org/whl/torch-2.2.0+cu121.html
-      - absl-py==2.3.0
-      - fsspec==2025.5.1
-      - grpcio==1.72.1
-      - joblib==1.5.1
-      - markdown==3.8
-      - pytorch-lightning==2.5.1.post0
-      - scikit-learn==1.6.1
-      - tensorboard==2.19.0
-      - tensorboard-data-server==0.7.2
-      - threadpoolctl==3.6.0
-      - torch-cluster==1.6.3+pt22cu121
-      - torch-geometric==2.3.1
-      - torch-scatter==2.1.2+pt22cu121
-      - torch-tb-profiler==0.4.3
+      - --index-url https://download.pytorch.org/whl/cu121
+      - torch==2.2.0
+      - torchvision
+      - torchmetrics
+      # - https://data.pyg.org/whl/torch-2.2.0%2Bcu121/pyg_lib-0.4.0%2Bpt22cu121-cp39-cp39-win_x86_64.whl # no win?
+      - https://files.pythonhosted.org/packages/06/a5/9f5af849c4185da5ea55f70ef17e23f93355cd4e989d82cfc8ba2d8747af/torch_geometric-2.3.1.tar.gz
+      # - pyg_lib
+      # - pytorch_geometric
+      # - absl-py==2.3.0
+      # - fsspec==2025.5.1
+      # - grpcio==1.72.1
+      # - joblib==1.5.1
+      # - markdown==3.8
+      # - pytorch-lightning==2.5.1.post0
+      # - scikit-learn==1.6.1
+      ## - tensorboard
+      ## - tensorboard-data-server
+      ## - threadpoolctl
+      - https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_cluster-1.6.3%2Bpt22cu121-cp39-cp39-win_amd64.whl
+      - https://data.pyg.org/whl/torch-2.2.0%2Bcu121/torch_scatter-2.1.2%2Bpt22cu121-cp39-cp39-win_amd64.whl
+      # - torch_cluster==1.6.3+pt22cu121
+      # - torch_scatter==2.1.2+pt22cu121
+      ## - torch-tb-profiler
 
